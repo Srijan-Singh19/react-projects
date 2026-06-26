@@ -9,6 +9,9 @@ export default function Profile() {
       <img
         src={pic}
         alt="Profile"
+        style={{
+            width:"100px"
+        }}
       />
 
       <h2>{name}</h2>
