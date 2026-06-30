@@ -4,9 +4,9 @@ export default function Projects() {
       <h3>Projects</h3>
 
       <ul>
-        <li>Weather App</li>
-        <li>Quiz App</li>
-        <li>Portfolio Website</li>
+        <li>Healthcare-Monitoring-System</li>
+        <li>presensee Public</li>
+        <li>cpbyte-student-portal</li>
       </ul>
     </>
   );
