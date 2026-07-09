@@ -1,11 +1,11 @@
-import { useState } from "react";
+import useLocalStorage from "./hooks/useLocalStorage";
 import ExpenseForm from "./components/ExpenseForm";
 import ExpenseList from "./components/ExpenseList";
-// import Summary from "./components/Summary";
+import Summary from "./components/Summary";
 import "./App.css";
 
 export default function App(){
-  const [ expenses, setExpenses] = useState([]);
+  const [ expenses, setExpenses] = useLocalStorage("expenses", []);
   function addExpense(amount, category){
     const expense ={
       id:Date.now(),
@@ -26,6 +26,7 @@ export default function App(){
     <div className="app">
       <h1>Expense Tracker</h1>
       <ExpenseForm addExpense = {addExpense}/>
+      <Summary expenses={expenses} />
       <ExpenseList
            expenses={expenses}
            deleteExpense={deleteExpense}
