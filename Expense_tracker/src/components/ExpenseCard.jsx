@@ -8,7 +8,7 @@ export default function ExpenseCard({ expense, deleteExpense }) {
 
             <p>{expense.date}</p>
 
-            <button onClick={() => deleteExpense(expense.id)}>
+            <button   className="delete-btn" onClick={() => deleteExpense(expense.id)}>
                 Delete
             </button>
 
